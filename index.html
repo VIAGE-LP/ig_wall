@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>ig牆</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+</head>
+
+<body>
+    <section id="report">
+        <div class="container">
+            <div class="ig_slider">
+            </div>
+        </div>
+    </section>
+    <!-- /wrapper -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script src='js/user_data.js'></script>
+    <script>
+        let html = ''
+
+        user_data.forEach(function ({ name, text, url }, index) {
+            html += `
+    <div>
+              <a href="${url}" target="_blank" class="ig_box">
+                <div class="ig_name">
+                  <span><img src="images/ig_img${index + 1}.jpg"/></span>${name}
+                </div>
+                <img src="images/ig_img${index + 1}.jpg" alt="" class="ig_img" />
+                <p>
+                  ${text}
+                </p>
+                <div class="btn_more">完整心得</div>
+                <div class="icon_heart"></div>
+                <div class="btn_more_love"></div>
+                <div class="btn_more_line"></div>
+              </a>
+            </div>
+    `
+        })
+
+        document.querySelector('.ig_slider').innerHTML = html
+        $(".ig_slider").slick({
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            // autoplay: true,
+            autoplaySpeed: 2000,
+            arrows: true,
+            dots: true
+        });
+    </script>
+</body>
+
+</html>

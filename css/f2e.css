@@ -1,0 +1,92 @@
+#data_box .bday-select {
+    float: left;
+    position: relative;
+    width: 30%;
+    margin: 0;
+    border: none;
+    border-radius: none;
+  }
+  
+  #data_box .bday-select:after {
+    position: absolute;
+    content: "";
+    z-index: 2;
+    top: 44%;
+    right: 10px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border: solid transparent;
+    border-top-color: #272938;
+    border-width: 8px;
+  }
+  
+  #data_box .bday-select > select {
+    cursor: pointer;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 66px;
+    padding-left: 20px;
+    border: 0;
+    border-radius: 0px;
+    background-color: transparent;
+    color: #000;
+    font-family: "Noto Sans TC", Helvetica, Arial, "暺煾��-蝜�", "Heiti TC", "�琿��", "LiHei", "敺株��迤暺煾��", "Microsoft JhengHei", sans-serif;
+  }
+  
+  #data_box .bday-select > select:focus {
+    border: 0;
+    outline-offset: 0;
+    outline: 0 none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  
+  #data_box .bday-select > select > option {
+    font-weight: 400;
+    color: #888;
+    border: none;
+    border-radius: 0;
+    font-family: "Noto Sans TC", Helvetica, Arial, "暺煾��-蝜�", "Heiti TC", "�琿��", "LiHei", "敺株��迤暺煾��", "Microsoft JhengHei", sans-serif;
+  }
+  
+  #data_box .bday-select > select > option:hover {
+    border: none;
+    border-radius: 0;
+  }
+
+  .exchange .exchange_box .send .color01.already-exchanged {
+      background-color: grey;
+  }
+
+  .slick-prev, .slick-next {
+    width: 42px;
+    height: 155px;
+    background-size: 100% auto;
+  }
+
+  .slick-prev {
+    background-image: url(../images/arrow_l@2x.png);
+    left: -55px;
+  }
+
+  .slick-next {
+    background-image: url(../images/arrow_r@2x.png);
+    right: -31px;
+  }
+
+  .slick-next:before,
+  .slick-prev:before {
+    content: ''
+  }
+  
+  .slick-prev:hover, .slick-prev:focus{
+    background-image: url(../images/arrow_l@2x.png);
+    background-size: 100% auto;
+
+  } 
+  
+  .slick-next:hover, .slick-next:focus {
+    background-image: url(../images/arrow_r@2x.png);
+    background-size: 100% auto;
+  }
