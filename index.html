@@ -2,29 +2,28 @@
 <html lang="zh-TW">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>ig_wall</title>
-    <link rel="stylesheet" href="css/main.css" />
-    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+  <meta charset="UTF-8" />
+  <title>ig牆</title>
+  <link rel="stylesheet" href="css/main.css" />
 </head>
 
 <body>
-    <section id="report">
-        <div class="container">
-            <div class="ig_slider">
-            </div>
-        </div>
-    </section>
-    <!-- /wrapper -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="js/slick.min.js"></script>
-    <script src='js/user_data.js'></script>
-    <script>
-        let html = ''
+  <section id="report">
+    <div class="container">
+      <div class="ig_slider"></div>
+    </div>
+    </div>
+  </section>
+  <!-- /wrapper -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+  <script src='js/user_data.js'></script>
+  <script>
+    let html = ''
 
-        user_data.forEach(function ({ name, text, url }, index) {
-            html += `
-    <div>
+    user_data.forEach(function ({ name, text, url }, index) {
+      html += `
+            <div>
               <a href="${url}" target="_blank" class="ig_box">
                 <div class="ig_name">
                   <span><img src="images/ig_img${index + 1}.jpg"/></span>${name}
@@ -40,18 +39,32 @@
               </a>
             </div>
     `
-        })
+    })
 
-        document.querySelector('.ig_slider').innerHTML = html
-        $(".ig_slider").slick({
+    document.querySelector('.ig_slider').innerHTML = html
+    $(".ig_slider").slick({
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      arrows: true,
+      dots: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
             slidesToShow: 4,
-            slidesToScroll: 4,
-            // autoplay: true,
+            slidesToScroll: 1,
+            infinite: true,
+            autoplay: true,
             autoplaySpeed: 2000,
-            arrows: true,
-            dots: true
-        });
-    </script>
+            arrows: false,
+            dots: false,
+          }
+        },
+      ]
+    });
+  </script>
 </body>
 
 </html>
