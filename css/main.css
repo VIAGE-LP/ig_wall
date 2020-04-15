@@ -577,6 +577,12 @@ option {
   margin-top: 20px;
 }
 
+@media screen and (max-width: 768px){
+  #report .ig_slider {
+    margin-left: 2%;
+  }
+}
+
 #report .ig_slider .slick-dots li.slick-active button:before,
 #report .ig_slider .slick-dots li button:before {
   color: #fff;
