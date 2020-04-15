@@ -201,12 +201,6 @@
   width: 100%;
 }
 
-@media screen and (max-width: 768px){
-  .slick-dots {
-    display: none;
-  }
-}
-
 .slick-dots li {
   position: relative;
   display: inline-block;
@@ -475,7 +469,7 @@ option {
 
 #report {
   width: 100%;
-  height: 1058px;
+  height: 800px;
   padding-top: 80px;
   overflow: hidden;
 }
@@ -603,7 +597,7 @@ option {
 
 #report a.ig_box {
   width: 260px;
-  height: 510px;
+  height: 440px;
   background-color: #fff;
   display: block;
   color: #888;
@@ -611,6 +605,14 @@ option {
   -webkit-transition: all ease-in-out 0.4s;
   transition: all ease-in-out 0.4s;
 }
+
+/* @media screen and (max-width: 768px){
+  #report a.ig_box {
+    width: 100%;
+    height: 450px;
+    padding: 0 8px;
+  }
+} */
 
 #report a.ig_box > p {
   font-size: 15px;
@@ -663,6 +665,12 @@ option {
   color: #272938;
 }
 
+/* @media screen and (max-width: 768px){
+  #report .ig_name {
+    font-size: 0.5rem;
+  }
+} */
+
 #report .ig_name img {
   width: 35px;
   display: inline-block;
@@ -676,6 +684,13 @@ option {
   height: 234px;
   margin: 0 auto;
 }
+
+/* @media screen and (max-width: 768px){
+  #report .ig_img {
+    width: 100%;
+    height: auto;
+  }
+} */
 
 #report .btn_more {
   font-size: 18px;
@@ -757,13 +772,6 @@ option {
   background-image: url(../images/arrow_r@2x.png);
   right: -31px;
 }
-
-@media screen and (max-width: 768px){
-  .slick-prev, .slick-next {
-    display: none;
-  }
-}
-
 
 .slick-next:before,
 .slick-prev:before {

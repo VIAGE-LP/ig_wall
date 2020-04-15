@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ig牆</title>
   <link rel="stylesheet" type="text/css" href="slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
@@ -17,7 +18,8 @@
     </div>
   </section>
   <!-- /wrapper -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="js/slick.min.js"></script>
   <script src='js/user_data.js'></script>
   <script>
@@ -47,14 +49,14 @@
     $(".ig_slider").slick({
       infinite: true,
       slidesToShow: 4,
-      slidesToScroll: 1,
+      slidesToScroll: 4,
       autoplay: true,
       autoplaySpeed: 2000,
       arrows: true,
       dots: true,
       responsive: [
         {
-          breakpoint: 769,
+          breakpoint: 768,
           settings: {
             slidesToShow: 4,
             slidesToScroll: 1,
@@ -66,5 +68,4 @@
     });
   </script>
 </body>
-
 </html>
